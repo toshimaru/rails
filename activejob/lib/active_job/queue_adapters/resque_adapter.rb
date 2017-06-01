@@ -5,11 +5,7 @@ require "active_support/core_ext/array/access"
 begin
   require "resque-scheduler"
 rescue LoadError
-  begin
-    require "resque_scheduler"
-  rescue LoadError
-    false
-  end
+  false
 end
 
 module ActiveJob
