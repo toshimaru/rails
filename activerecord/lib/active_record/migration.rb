@@ -1026,14 +1026,14 @@ module ActiveRecord
     delegate :migrate, :announce, :write, :disable_ddl_transaction, to: :migration
 
     private
-      def migration
-        @migration ||= load_migration
-      end
+    def migration
+      @migration ||= load_migration
+    end
 
-      def load_migration
-        require(File.expand_path(filename))
-        name.constantize.new(name, version)
-      end
+    def load_migration
+      require(File.expand_path(filename))
+      name.constantize.new(name, version)
+    end
   end
 
   class MigrationContext #:nodoc:

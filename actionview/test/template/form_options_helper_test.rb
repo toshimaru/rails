@@ -24,9 +24,9 @@ class FormOptionsHelperTest < ActionView::TestCase
   silence_warnings do
     Post        = Struct.new("Post", :title, :author_name, :body, :written_on, :category, :origin, :allow_comments) do
                     private
-                      def secret
-                        "This is super secret: #{author_name} is not the real author of #{title}"
-                      end
+                    def secret
+                      "This is super secret: #{author_name} is not the real author of #{title}"
+                    end
                   end
     Continent   = Struct.new("Continent", :continent_name, :countries)
     Country     = Struct.new("Country", :country_id, :country_name)

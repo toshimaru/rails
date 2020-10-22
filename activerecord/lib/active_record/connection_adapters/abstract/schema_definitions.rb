@@ -122,9 +122,9 @@ module ActiveRecord
       end
 
       private
-        def default_primary_key
-          "id"
-        end
+      def default_primary_key
+        "id"
+      end
     end
 
     CheckConstraintDefinition = Struct.new(:table_name, :expression, :options) do
